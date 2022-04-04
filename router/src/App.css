@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Montserrat:wght@400;600&display=swap');
+*{
+  margin:0;
+  padding:0;
+}
+:root{
+--black:#180A0A;
+--purple:#711A75;
+--darkPPink:#F10086;
+--pink:#F582A7;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+nav{
+  background-color: var(--black);
+
+  width:100%;
+  display:flex;
+  height: 6rem;
+  padding:0 5rem;
+  -webkit-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+}
+.navItem{
+  border:1px  solid var(--purple);
+  background-color: rgba(77, 8, 104, 0.75);
+  border-radius: 15px;
+margin:auto 1rem;
+padding:0.5rem 1rem;
+color:white;
+}
+.navItem:hover{
+  background-color: var(--purple);
+  padding:0.8rem 1rem;
+
+}
+.App{
+background-color:var(--darkPPink);
+padding-bottom:19rem;
+min-height: 100vh;
+}
+.Welcome{
+  padding:2rem;
+  font-weight: 600;
+  font-size: xx-large;
+}
+.third{
+  width:90vw;
+  margin:auto;
+}
+.col-8{
+  width:85vw;
+  margin:2rem auto 0 auto;
+}
+.Flex{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-between ;
+}
+
+.Flex button {
+  margin:0.5rem ;
+  text-align: center;
+  background-color: #FF6B6B;
+  color:white;
+  padding:0.5rem 0.7rem;
+  border-radius: 15px;
+  border: solid 0px;
+  -webkit-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+  cursor:pointer;
+}
+
+li, a{
+  list-style: none;
+  text-decoration: none;}
+
+.Container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+.Card button{
+  background-color: #FFD93D;
+  padding:0.5rem;
+  border: 0px solid ;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+
+.Card{
+  
+  background-color:#fff;
+  width:10vw;
+  min-height: 12rem;
+  align-items: center;
+  text-align: left;
+  margin:1rem;
+  padding:1rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
+}
+
+.Card img{
+  width:5em;
+}
