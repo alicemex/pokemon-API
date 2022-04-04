@@ -4,6 +4,7 @@ import Home from './components/Home.js'
 import Pokemons from "./components/Pokemons";
 import Credits from "./components/Credits";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import PokemonDetail from "./components/PokemonDetail";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
 
           <Route element={<ProtectedRoutes/>}>
               <Route path="/Pokemons" element={<Pokemons />} />
-              <Route path="/Pokemons:id" element={<Pokemons />} />
+              <Route path="/Pokemons/:id" element={<PokemonDetail />} />
           </Route>
 
           <Route path="/" element={<Home />} />

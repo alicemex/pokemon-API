@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   userName: "",
+  id:null,
 
 };/** este objeto es el estado global de la store de redux
 la función reducer recibe un getState() y un action, la action es la única que puede 
@@ -17,6 +18,11 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         userName: action.payload
       };
+    case "GET_ID":
+      return {
+        ...state, 
+        id: action.payload
+      }
 
     default:
       return state;
