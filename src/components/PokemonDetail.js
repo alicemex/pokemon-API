@@ -13,11 +13,16 @@ useEffect(()=>{
 },[id])
 
     return (
-        <div>
-            <h1>pokemon Detail{id}</h1>
-            <p><img src={pokemonDetails.sprites?.front_default} alt=""></img></p>
-        
-            <p> Base Experience: {(pokemonDetails.base_experience)}</p>
+        <div className='PokemonDetail'>
+            <h2>{pokemonDetails.name}</h2>
+            <p><img src={pokemonDetails.sprites?.other.dream_world.front_default} alt=""></img></p>
+           {/*  <p> <strong>Type:</strong> {(pokemonDetails?.types[0].type.name)}</p> */}
+           
+            <p>#00{id}</p>
+            <p> <strong>Base Experience:</strong> {(pokemonDetails.base_experience)}</p>
+            <p> <strong>Weight:</strong> {(pokemonDetails.weight)}Lbs</p>
+            <p> <strong>Height:</strong> {(pokemonDetails.height)}"</p>
+            
           
 
         </div>

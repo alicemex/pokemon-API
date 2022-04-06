@@ -20,6 +20,7 @@ const Home = () => {
         window.alert("no userName, please introduce an userName and try again");
       }
     };
+    
     return (
         <div className='Welcome'>
            <h3> Hello extranger trainer!</h3>

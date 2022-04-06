@@ -5,15 +5,23 @@ import Pokemons from "./components/Pokemons";
 import Credits from "./components/Credits";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import PokemonDetail from "./components/PokemonDetail";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+ const resetUser=(userName)=>{
+    dispatch({
+      type: "GET_USERNAME",
+      payload: userName
+    });   
+  }
   return (
     <div className="App">
       <HashRouter>
          
         <nav className="Flex">
-            <Link className="navItem" to="/">Home</Link>
-            <Link className="navItem" to="/Pokemons">Pokemons</Link>
+            <Link className="navItem" to="/" onClick={()=>{resetUser("")}}>Home</Link>
+            <Link className="navItem" to="/Pokemons" >Pokemons</Link>
             <Link className="navItem" to="/Credits">Credits</Link>
         </nav>
          
