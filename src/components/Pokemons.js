@@ -1,14 +1,15 @@
 import React from 'react';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import PokemonInfo from './PokemonInfo';
-
+import { useNavigate, Link } from 'react-router-dom';
 
 const Pokemons = () => {
 
 const [pokemons, setPokemons] = useState([]);
 const [category, setCategory] = useState([]);
+const [pokemonName, setPokemonName] = useState("")
 const [isCategorySelected, setIsCategorySelected] = useState(false);
 //paginación, creamos una copia del fragmento de pokemones a mostrar
 const [page, setPage] = useState(1);
@@ -18,6 +19,8 @@ const firstIndex = lastIndex-currentItemsPerPage;
 const pokemonPaginated = pokemons.slice(firstIndex,lastIndex);
 const totalPages = Math.ceil(pokemons?.length/currentItemsPerPage);
 const userName = useSelector((state)=>state.userName);
+const navigate = useNavigate();
+const dispatch = useDispatch();
 const pagesNumber = [];
 
 
@@ -50,13 +53,30 @@ axios.get(type)
 setIsCategorySelected(true);
 
 }
-
+const submit=((e)=>{
+  e.preventDefault();
+  dispatch({
+    type:"GET_ID",
+    payload:pokemonName
+  })
+    // En la pokedex, esto funcionará
+    navigate(`/Pokemons/${pokemonName}`);
+})
     return (
         <>
          
-          <div className='Welcome'> Welcome to Pokedex, dear <strong>{userName}</strong>!</div>
-
-          <div className="Controls">
+        <div className='Welcome'> Welcome to Pokedex, dear <strong>{userName}</strong>!</div>
+        <div className="Controls">
+        <form className="input-container" onSubmit={submit}>
+        <label htmlFor="character-name">Busca por nombre</label>
+            <input
+              type="text"
+              id="pokemon-name"
+              value={pokemonName}
+              onChange={(e) => setPokemonName(e.target.value)}
+              />
+          <button>Buscar</button>
+         </form>
                 <h3>Showing {page} of {totalPages} Pages</h3>
                 <div>
                           <select onChange={handleCategory}>

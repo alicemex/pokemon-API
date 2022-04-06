@@ -5,14 +5,12 @@ import axios from 'axios';
 
 const PokemonDetail = () => {
 const [pokemonDetails, setpokemonDetails] = useState({});
-const id =useSelector(state=>(state.id));
+const id = useSelector(state=>(state.id));
 
 useEffect(()=>{
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then(res => setpokemonDetails(res.data))
 },[id])
-
-console.log(pokemonDetails.sprites?.front_default)
 
     return (
         <div className='PokemonDetail'>
