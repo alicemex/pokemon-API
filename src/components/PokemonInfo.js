@@ -29,7 +29,7 @@ const pokeInfo = (id)=>{
                         <li>Name: {pokemonData.name}</li>
                         <li>height: {pokemonData.height}</li>
                         <li>ID: {pokemonData.id}</li>
-                        <li><img src ={pokemonData.sprites?.front_default} alt=""></img></li>
+                        <li><img src ={pokemonData.sprites?.other.dream_world.front_default} alt=""></img></li>
                         <Link to="/Pokemons/:id">
                              <button onClick={()=>{pokeInfo(pokemonData.id)}}>
                                  More info 

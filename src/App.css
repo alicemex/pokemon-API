@@ -2,24 +2,25 @@
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 :root{
 --black:#180A0A;
 --purple:#711A75;
 --darkPPink:#F10086;
 --pink:#F582A7;
+--yellow:rgb(253, 216, 33);
 }
 
 body{
   font-family: 'Josefin Sans', sans-serif;
 }
 nav{
-  background-color: var(--black);
-
+  background-color: var(--darkPPink);
   width:100%;
   display:flex;
   height: 6rem;
-  padding:0 5rem;
+  padding:0 15rem;
   -webkit-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
 box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
@@ -38,30 +39,33 @@ color:white;
 
 }
 .App{
-background-color:var(--darkPPink);
-padding-bottom:19rem;
+background-color:var(--black);
+padding-bottom:15rem;
 min-height: 100vh;
+
 }
 .Welcome{
   padding:2rem;
   font-weight: 600;
-  font-size: xx-large;
-}
-.third{
-  width:90vw;
-  margin:auto;
-}
-.col-8{
-  width:85vw;
-  margin:2rem auto 0 auto;
-}
-.Flex{
-  display:flex;
-  flex-wrap: nowrap;
-  justify-content: space-between ;
+  color:var(--yellow);
+  line-height: 2rem;
+  font-size: large;
+  text-align: center;
 }
 
-.Flex button {
+.Controls{
+  background-color: var(--purple);
+  color:white;
+  padding: 1rem 2rem;
+  min-height: 10vh;
+  margin:0 auto 2rem auto;
+}
+.Controls button{
+  margin:0.5em;
+}
+
+
+.Controls button {
   margin:0.5rem ;
   text-align: center;
   background-color: #FF6B6B;
@@ -75,6 +79,19 @@ box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
   cursor:pointer;
 }
 
+.third{
+  width:90vw;
+  margin:auto;
+}
+.col-8{
+  width:85vw;
+  margin:2rem auto 0 auto;
+}
+.Flex{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around ;
+}
 li, a{
   list-style: none;
   text-decoration: none;}
@@ -88,6 +105,7 @@ li, a{
 .Card button{
   background-color: #FFD93D;
   padding:0.5rem;
+  margin:auto 0 auto 10rem;
   border: 0px solid ;
   border-radius: 15px;
   cursor: pointer;
@@ -95,13 +113,12 @@ li, a{
 }
 
 .Card{
-  
   background-color:#fff;
-  width:10vw;
-  min-height: 12rem;
+  min-width:20vw;
+  min-height: 15rem;
   align-items: center;
   text-align: left;
-  margin:1rem;
+  margin:0.5rem;
   padding:1rem;
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
@@ -110,5 +127,6 @@ box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
 }
 
 .Card img{
-  width:5em;
+  margin:2rem auto 0 auto;
+  height:8em;
 }

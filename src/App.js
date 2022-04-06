@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <HashRouter>
          
-        <nav>
+        <nav className="Flex">
             <Link className="navItem" to="/">Home</Link>
             <Link className="navItem" to="/Pokemons">Pokemons</Link>
             <Link className="navItem" to="/Credits">Credits</Link>

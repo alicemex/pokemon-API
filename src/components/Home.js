@@ -21,9 +21,12 @@ const Home = () => {
       }
     };
     return (
-        <div>
-            <h1>"home"</h1>
-            <form action="" onSubmit={submit}>
+        <div className='Welcome'>
+           <h3> Hello extranger trainer!</h3>
+           <p> To start, please insert your name below</p>
+          
+            
+      <form action="" onSubmit={submit}>
         <input
           type="text"
           value={userName}
