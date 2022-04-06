@@ -74,26 +74,16 @@ setIsCategorySelected(true);
                             <button onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
                 </div>
            </div>            
-
-          {isCategorySelected?
-                     <div  className='Container'>
-                                {pokemonPaginated.map((pokemon)=>(
-                                  <p key={pokemon.pokemon?.url}>
-                                  <PokemonInfo pokemonUrl = {pokemon.pokemon?.url}/>
-                                </p>
-                                ))}
-                     </div>
-          :         
+   
                     <div className='Container'>            
                       {pokemonPaginated.map(pokemon =>(
-                          <div key={pokemon.url}>
+                          <div key={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}>
                               <PokemonInfo
-                                pokemonUrl = {pokemon.url}
+                                pokemonUrl={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}
                               />
                           </div>
                         ))}
                       </div>
-          }  
 
 
                      

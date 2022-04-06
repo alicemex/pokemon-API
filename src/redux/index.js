@@ -24,6 +24,8 @@ const reducer = (state = INITIAL_STATE, action) => {
         id: action.payload
       }
 
+  
+
     default:
       return state;
   }
