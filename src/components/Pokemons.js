@@ -63,51 +63,52 @@ const submit=((e)=>{
     navigate(`/Pokemons/${pokemonName}`);
 })
     return (
-        <>
-         
-        <div> Welcome to Pokedex, dear <strong>{userName}</strong>!</div>
-        <div className="Controls">
-        <form className="input-container" onSubmit={submit}>
-        <label htmlFor="character-name">Busca por nombre</label>
-            <input
-              type="text"
-              id="pokemon-name"
-              value={pokemonName}
-              onChange={(e) => setPokemonName(e.target.value)}
-              />
-          <button>Buscar</button>
-         </form>
-                <h3>Showing {page} of {totalPages} Pages</h3>
-                <div>
-                          <select onChange={handleCategory}>
-                                {category.map((category)=>(
-                                  <option key={category.name} value={category.url}>
-                                  {category.name}
-                                </option>
+    <>
+      
+    <div className='Welcome-pokemons'>
+      <h2> Welcome to Pokedex, dear <strong>{userName}</strong>!</h2>
+          <div className="Controls">
+                      <form className="input-container" onSubmit={submit}>
+                      <label htmlFor="pokemon-name">Busca por nombre</label>
+                        <input
+                          type="text"
+                          id="pokemon-name"
+                          value={pokemonName}
+                          onChange={(e) => setPokemonName(e.target.value)}
+                          />
+                      <button className='Search'>Buscar</button>
+                    </form>
+                    <label><i>Showing {page} of {totalPages} Pages</i></label>
+                    <div>
+                              <select onChange={handleCategory}>
+                                    {category.map((category)=>(
+                                      <option key={category.name} value={category.url}>
+                                      {category.name}
+                                    </option>
+                                    ))}
+                              </select>
+                  
+                              <button className="Arrow" onClick={()=>(setPage(page-1))} disabled ={page<=1}>Anterior</button>
+                                {pagesNumber.map(page=>(
+                                    <button className="pageNumber" onClick={()=>(setPage(page))} key={page}>{page}</button>
                                 ))}
-                          </select>
-              
-                            <button className={"Arrow"} onClick={()=>(setPage(page-1))} disabled ={page<=1}>Anterior</button>
-                            {pagesNumber.map(page=>(
-                                <button onClick={()=>(setPage(page))} key={page}>{page}</button>
-                            ))}
-                            <button onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
-                </div>
-           </div>            
+                              <button className="Arrow" onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
+                    </div>
+        </div>            
    
-                    <div className='Container'>            
-                      {pokemonPaginated.map(pokemon =>(
-                          <div key={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}>
-                              <PokemonInfo
-                                pokemonUrl={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}
-                              />
-                          </div>
-                        ))}
-                      </div>
+        <div className='Container'>            
+          {pokemonPaginated.map(pokemon =>(
+              <div key={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}>
+                  <PokemonInfo
+                    pokemonUrl={isCategorySelected  ? pokemon.pokemon?.url : pokemon.url}
+                  />
+              </div>
+            ))}
+        </div>
 
 
-                     
-        </>
+    </div>   
+    </>
               
     );
 };

@@ -55,9 +55,21 @@ body{
         align-items:center;
         vertical-align: center;
       }
+      .Welcome-pokemons{
+        background-color: rgba(0,0,0,0.7);
+        min-height: 100vh;
+        text-align: right;
+        color:var(--yellow);
+        font-size: x-small;
+        padding:1rem 0;
+      }
+      .Welcome-pokemons h2{
+        margin:auto 2rem;
+      }
       .Welcome{
         vertical-align:center;
         margin:auto;
+        border-radius: 15px;
         background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(252,0,0,1) 50%, rgba(0,0,0,1) 100%);
         width:40vh;
         padding:2rem;
@@ -86,6 +98,8 @@ body{
         height: 2rem;
         border-radius: 15px;
         border:solid 0px;
+        padding: 0 2rem;
+        text-align: center;
       }
       .Welcome button{
         margin:0.5rem auto 2rem auto;
@@ -97,21 +111,37 @@ body{
       }
 
       .Controls{
-        background-color: var(--purple);
-        color:white;
+        background-color: var(--yellow);
+        color:black;
         padding: 1rem 2rem;
         min-height: 10vh;
-        margin:0 auto 2rem auto;
+        margin:1rem auto 2rem auto;
+        text-align:center;
       }
-      .Controls button{
-        margin:0.5em;
+      .Controls label{
+        font-size:1.2rem;
+        font-weight: bold;
+        line-height: 2rem;
       }
-
-
-      .Controls button {
-        margin:0.5rem ;
+      .Controls select{
+        width:80vw;
         text-align: center;
-        background-color: #FF6B6B;
+        margin:1rem auto;
+        height: 2rem;
+        border-radius: 15px;
+        border: solid 0px;
+        -webkit-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+      box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+        cursor:pointer;
+
+      }
+      .Search{
+        margin:0.5em;
+        width:68vw;
+        margin:0.5rem auto 1rem auto;
+        text-align: center;
+        background-color: red;
         color:white;
         padding:0.5rem 0.7rem;
         border-radius: 15px;
@@ -121,7 +151,22 @@ body{
       box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
         cursor:pointer;
       }
-
+      .Arrow{
+        background-color: red;
+        color:white;
+        border:0px solid;
+        padding:0.3rem 0.5rem;
+        border-radius: 10px;
+        margin:0.2rem;
+      }
+      .pageNumber{
+        background-color: red;
+        color:white;
+        border:0px solid;
+        padding:0.3rem 0.5rem;
+        border-radius: 10px;
+        margin:0.2rem;
+      }
       .third{
         width:90vw;
         margin:auto;
@@ -146,7 +191,8 @@ body{
         min-height: 100vh;
       }
       .Card button{
-        background-color: #FFD93D;
+        background-color: red;
+        color:white;
         padding:0.5rem;
         margin:auto 0 auto 10rem;
         border: 0px solid ;
@@ -157,12 +203,13 @@ body{
 
       .Card{
         background-color:#fff;
-        min-width:20vw;
+        min-width:10vw;
         min-height: 15rem;
         align-items: center;
         text-align: left;
         margin:0.5rem;
         padding:1rem;
+        color:black;
         border-radius: 15px;
         -webkit-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
       -moz-box-shadow: 0px 5px 11px -5px rgba(0,0,0,0.75);
