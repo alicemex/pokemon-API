@@ -65,7 +65,7 @@ const submit=((e)=>{
     return (
         <>
          
-        <div className='Welcome'> Welcome to Pokedex, dear <strong>{userName}</strong>!</div>
+        <div> Welcome to Pokedex, dear <strong>{userName}</strong>!</div>
         <div className="Controls">
         <form className="input-container" onSubmit={submit}>
         <label htmlFor="character-name">Busca por nombre</label>
