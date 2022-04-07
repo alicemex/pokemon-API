@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import PokemonInfo from './PokemonInfo';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Pokemons = () => {
 
