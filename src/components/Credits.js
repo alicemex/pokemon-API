@@ -13,7 +13,7 @@ const Credits = () => {
                     <a href={"https://pokeapi.co/"}>PokeApi</a>
                 </p>
                 <p>
-                <h2>Mentori:</h2> 
+                <h2>Mentor:</h2> 
                     Andrés Mendoza, Colombia.
                 </p>
                 <p>

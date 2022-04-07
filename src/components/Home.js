@@ -34,7 +34,7 @@ const Home = () => {
               onChange={(e) => setUserName(e.target.value)}
             />
             <div className='space'></div>
-              <button >Submit</button>
+              <button className="submit" >Submit</button>
           </form>
           <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png"} alt="pokeball"></img>
         </div> 
