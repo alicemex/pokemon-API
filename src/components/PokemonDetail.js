@@ -1,21 +1,41 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Description from './Description';
 
+
 const PokemonDetail = () => {
 const [pokemonDetails, setpokemonDetails] = useState({});
 const id = useSelector(state=>(state.id));
-
+const dispatch = useDispatch();
 useEffect(()=>{
     axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then(res => setpokemonDetails(res.data))
 },[id])
 
-    return (
+const plus = ()=>{
+    console.log(id)
+    dispatch({
+        type:"INCREASE_ID",
+        payload:1
+    })
+}
+const less = ()=>{
+    console.log(id)
+    dispatch({
+        type:"DECREASE_ID",
+        payload:1
+    })
+}
+return (
         <div className='PokemonDetail'>
             <h2>{pokemonDetails.name}</h2>
+           {id? <button className="prev"
+            onClick={less}>◄</button>:<p></p>}
+          
+            <button 
+            onClick={plus} className="next">►</button>
             <img src={pokemonDetails.sprites?.other.dream_world.front_default || pokemonDetails.sprites?.front_default} alt=""></img>
             <p  className="detailFeature"> <strong>Type:</strong> 
             {pokemonDetails.types?.map(type => <div className="info">{type.type.name}</div>)}

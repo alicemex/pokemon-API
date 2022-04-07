@@ -23,8 +23,16 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state, 
         id: action.payload
       }
-
-  
+    case "DECREASE_ID":
+      return{
+        ...state,
+        id: state.id-(action.payload)
+      }
+      case "INCREASE_ID":
+        return{
+          ...state,
+          id: state.id+(action.payload)
+        }
 
     default:
       return state;

@@ -69,14 +69,14 @@ const submit=((e)=>{
       <h2> Welcome to Pokedex, dear <strong>{userName}</strong>!</h2>
           <div className="Controls">
                       <form className="input-container" onSubmit={submit}>
-                      <label htmlFor="pokemon-name">Busca por nombre</label>
+                      <label htmlFor="pokemon-name">Search by name or #</label>
                         <input
                           type="text"
                           id="pokemon-name"
                           value={pokemonName}
                           onChange={(e) => setPokemonName(e.target.value)}
                           />
-                      <button className='Search'>Buscar</button>
+                      <button className='Search'>Search</button>
                     </form>
                     <label><i>Showing {page} of {totalPages} Pages</i></label>
                     <div>
@@ -100,11 +100,11 @@ const submit=((e)=>{
             ))}
         </div>
           <div className="Controls">
-              <button className="Arrow" onClick={()=>(setPage(page-1))} disabled ={page<=1}>Anterior</button>
+              <button className="Arrow" onClick={()=>(setPage(page-1))} disabled ={page<=1}>◄</button>
                 {pagesNumber.map(page=>(
                     <button className="pageNumber" onClick={()=>(setPage(page))} key={page}>{page}</button>
                 ))}
-              <button className="Arrow" onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
+              <button className="Arrow" onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>►</button>
           </div>   
     </div>
     </>
