@@ -26,7 +26,7 @@ useEffect(()=>{
                     <Description species = {pokemonDetails.species?.url}/>
                 </div>
             </p>
-            <p className="detailFeature">Id: #00 <div className="info">{id}</div></p>
+            <p className="detailFeature">Id:  <div className="info">#00{id}</div></p>
             <p className="detailFeature"> <strong>Base Experience:</strong><div className='info'> {(pokemonDetails.base_experience)}</div></p>
             <p> <strong>Pokemon's back image</strong>
             <img className="back_default" src={pokemonDetails.sprites?.back_default} alt=""></img>

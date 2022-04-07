@@ -147,8 +147,8 @@ body{
         border-radius: 15px;
         border: solid 0px;
         -webkit-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
-      -moz-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
-      box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+         -moz-box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
+        box-shadow: 1px 3px 28px -4px rgba(0,0,0,0.75);
         cursor:pointer;
       }
       .Arrow{
@@ -251,5 +251,23 @@ body{
       .back_default{
         width:15rem;
         padding-top: -20rem;
+      }
+      .credits{
+        color:white;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+      .credits p{
+        margin:1.5rem auto;
+      }
+      .credits a{
+        text-decoration:none;
+        color:white;
+      }
+      .pokeball{
+        width:8rem;
+        margin:2rem auto;
+        position:absolute;
+        bottom:1rem;
       }
 }
