@@ -87,12 +87,6 @@ const submit=((e)=>{
                                     </option>
                                     ))}
                               </select>
-                  
-                              <button className="Arrow" onClick={()=>(setPage(page-1))} disabled ={page<=1}>Anterior</button>
-                                {pagesNumber.map(page=>(
-                                    <button className="pageNumber" onClick={()=>(setPage(page))} key={page}>{page}</button>
-                                ))}
-                              <button className="Arrow" onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
                     </div>
         </div>            
    
@@ -105,9 +99,14 @@ const submit=((e)=>{
               </div>
             ))}
         </div>
-
-
-    </div>   
+          <div className="Controls">
+              <button className="Arrow" onClick={()=>(setPage(page-1))} disabled ={page<=1}>Anterior</button>
+                {pagesNumber.map(page=>(
+                    <button className="pageNumber" onClick={()=>(setPage(page))} key={page}>{page}</button>
+                ))}
+              <button className="Arrow" onClick={()=>(setPage(page+1))} disabled = {page>=totalPages}>Siguente</button>
+          </div>   
+    </div>
     </>
               
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Description from './Description';
 
 const PokemonDetail = () => {
 const [pokemonDetails, setpokemonDetails] = useState({});
@@ -15,15 +16,23 @@ useEffect(()=>{
     return (
         <div className='PokemonDetail'>
             <h2>{pokemonDetails.name}</h2>
-            <p><img src={pokemonDetails.sprites?.other.dream_world.front_default || pokemonDetails.sprites?.front_default} alt=""></img></p>
-            <p> <strong>Type:</strong> 
-            {pokemonDetails.types?.map(type => <div>{type.type.name}</div>)}
+            <img src={pokemonDetails.sprites?.other.dream_world.front_default || pokemonDetails.sprites?.front_default} alt=""></img>
+            <p  className="detailFeature"> <strong>Type:</strong> 
+            {pokemonDetails.types?.map(type => <div className="info">{type.type.name}</div>)}
             </p>
            
-            <p>#00{id}</p>
-            <p> <strong>Base Experience:</strong> {(pokemonDetails.base_experience)}</p>
-            <p> <strong>Weight:</strong> {(pokemonDetails.weight)}Lbs</p>
-            <p> <strong>Height:</strong> {(pokemonDetails.height)}"</p>
+            <p className="detailFeature"> <strong>Specie:</strong>
+                <div className="info">
+                    <Description species = {pokemonDetails.species?.url}/>
+                </div>
+            </p>
+            <p className="detailFeature">Id: #00 <div className="info">{id}</div></p>
+            <p className="detailFeature"> <strong>Base Experience:</strong><div className='info'> {(pokemonDetails.base_experience)}</div></p>
+            <p className="detailFeature"> <strong>Dimensions:</strong> 
+                <div className='info'>Weight: {(pokemonDetails.weight)}Lbs</div>
+                <div className='info'>Height: {(pokemonDetails.height)}"</div>
+            </p>
+            
             
           
 
