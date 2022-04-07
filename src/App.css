@@ -247,4 +247,9 @@ body{
         color:black;
         border:0.5px solid black;
       }
+      /*imagen por detrás del pokemon, ultima card*/
+      .back_default{
+        width:15rem;
+        padding-top: -20rem;
+      }
 }
